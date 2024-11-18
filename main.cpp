@@ -14,7 +14,20 @@ void problem2(){
     f(i,9){    cout << *ptr++ << endl;}
 }
 
+// int findLargestElement(const int* arr, int size)
+int findLargestElement(const int* arr, int size) {
+    int mx = INT_MIN;
+    for (int i = 0; i < size; i++){ mx=max(*arr++,mx);  }
+    return mx;
+}
+
+void problem3() {
+    int n;  cin >> n;   int a[n];
+    f(i,n){ cin >> a[i];}
+    cout << findLargestElement(&a[0], n) << endl;
+}
+
 int main(){
-    problem2();
+    problem3();
     return 0;
 }
