@@ -16,7 +16,7 @@ void problem2(){
 
 // int findLargestElement(const int* arr, int size)
 int findLargestElement(const int* arr, int size) {
-    int mx = INT_MIN;
+    int mx = *arr;
     for (int i = 0; i < size; i++){ mx=max(*arr++,mx);  }
     return mx;
 }
