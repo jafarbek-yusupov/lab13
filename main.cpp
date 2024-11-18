@@ -27,6 +27,13 @@ void problem3() {
     cout << findLargestElement(&a[0], n) << endl;
 }
 
+void problem4() {
+    const int n = 10;
+    float *ptr, a[n];
+    f(i,n){ cin >> a[i];}
+
+}
+
 int main(){
     problem3();
     return 0;
