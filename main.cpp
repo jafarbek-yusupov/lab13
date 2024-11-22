@@ -30,8 +30,12 @@ void problem3() {
 void problem4() {
     const int n = 10;
     float *ptr, a[n];
-    f(i,n){ cin >> a[i];}
+    f(i,n){ cin >> *(a+i);}
+}
 
+void sumArrays(const double* arr1,const double* arr2, double* sum,int size){
+    for(int i=0;i<size;i++){    *(sum+i)= *(arr1 +i) + *(arr2+i);}
+    for(int i=0;i<size;i++){    cout << *(sum+i) << " ";}    cout << endl;
 }
 
 // problem 8
@@ -46,9 +50,15 @@ void swap(int* arr1,int* arr2,int size) {
 }
 
 int main(){
+    // FOR PR7
+    // double arr1[5] = {1.1, 2.2, 3.3, 4.4, 5};
+    // double arr2[5] = {5.5, 4.4, 3.3, 2.2, 1.1};
+    // double sum[5];
+    // sumArrays(arr1, arr2, sum, 5);
+    
+    // FOR PR8
     // int arr1[5] = {0,1,2,3,4};
     // int arr2[5] = {5,6,7,8,9};
     // swap(arr1,arr2,5);
-    // problem3();
     return 0;
 }
