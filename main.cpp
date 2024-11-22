@@ -49,6 +49,18 @@ void swap(int* arr1,int* arr2,int size) {
     for(int i=0;i<size;i++){    cout << arr2[i] << " ";}    cout << endl;
 }
 
+// problem 9
+bool is_in(const int* arr1,const int* arr2, int size1,int size2){
+    for(const int *p1=arr1;p1<size1+arr1;p1++){
+        bool fnd=false;
+        for(const int *p2=arr2; p2<size2+arr2;p2++) {
+            if(*p1 == *p2){ fnd=true; break; }
+        }
+        if(!fnd){ return false; }
+    }
+    return true;
+}
+
 int main(){
     // FOR PR7
     // double arr1[5] = {1.1, 2.2, 3.3, 4.4, 5};
@@ -60,5 +72,12 @@ int main(){
     // int arr1[5] = {0,1,2,3,4};
     // int arr2[5] = {5,6,7,8,9};
     // swap(arr1,arr2,5);
+
+    // FOR PR9
+    // int n,n1;  cin >> n;
+    // int a[n];   for(int i=0;i<n;i++) cin >> *(a+i);
+    // cin >> n1;  int a1[n1];
+    // for(int i=0;i<n1;i++){  cin >> *(a1+i);}
+    // cout << is_in(a,a1,n,n1) << endl;
     return 0;
 }
