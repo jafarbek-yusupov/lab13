@@ -23,7 +23,7 @@ int findLargestElement(const int* arr, int size) {
 
 void problem3() {
     int n;  cin >> n;   int a[n];
-    f(i,n){ cin >> a[i];}
+    f(i,n){ cin >> *(a+i);}
     cout << findLargestElement(&a[0], n) << endl;
 }
 
