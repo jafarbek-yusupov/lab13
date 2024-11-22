@@ -61,6 +61,19 @@ bool is_in(const int* arr1,const int* arr2, int size1,int size2){
     return true;
 }
 
+// problem 10
+void sortArray(int* arr, int size) {
+    for(int* i=arr;i<arr+size-1;i++){
+        for(int* j=arr;j<arr+size-(i-arr)-1;j++){
+            if(*j > *(j+1)) {
+                int tmp=*j;
+                *j= *(j+1);
+                *(j+1)= tmp;
+            }
+        }
+    }
+}
+
 int main(){
     // FOR PR7
     // double arr1[5] = {1.1, 2.2, 3.3, 4.4, 5};
@@ -79,5 +92,14 @@ int main(){
     // cin >> n1;  int a1[n1];
     // for(int i=0;i<n1;i++){  cin >> *(a1+i);}
     // cout << is_in(a,a1,n,n1) << endl;
+
+    // FOR PR10
+    // int arr[5] = {64, 25, 12, 22, 11};
+    // sortArray(arr, 5);
+    // cout << "Sorted array: ";
+    // for (int* p = arr; p < arr + 5; ++p) {
+    //     cout << *p << " ";
+    // }
+    // cout << endl;
     return 0;
 }
