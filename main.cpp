@@ -73,6 +73,15 @@ void sortArray(int* arr, int size) {
         }
     }
 }
+// problem 11
+void power(double* n,const int* p) {
+    double res = 1.0;
+    if (*p==0){  *n = 1.0; return;}
+    if (*p>0){   while (*p--){   res *= *n;}}
+    else{   while (*p++){   res *= *n;}  res = 1.0/res;}
+    *n =res;
+    cout << *n << endl;
+}
 
 int main(){
     // FOR PR7
