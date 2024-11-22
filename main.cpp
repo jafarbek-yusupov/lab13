@@ -34,7 +34,21 @@ void problem4() {
 
 }
 
+// problem 8
+void swap(int* arr1,int* arr2,int size) {
+    for(int i=0;i<size;i++) {
+        int tmp = arr1[i];
+        arr1[i] = arr2[i];
+        arr2[i] = tmp;
+    }
+    for(int i=0;i<size;i++){    cout << arr1[i] << " ";}    cout << endl;
+    for(int i=0;i<size;i++){    cout << arr2[i] << " ";}    cout << endl;
+}
+
 int main(){
-    problem3();
+    // int arr1[5] = {0,1,2,3,4};
+    // int arr2[5] = {5,6,7,8,9};
+    // swap(arr1,arr2,5);
+    // problem3();
     return 0;
 }
